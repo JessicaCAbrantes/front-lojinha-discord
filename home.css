@@ -1,7 +1,7 @@
 /* custom properties */
 
 :root {
-  /* color */
+  /* color - Cor (abreviação do nome da variável crl - matriz em graus, saturação em % e luminosidade em % */
   --clr-gray: 0 0% 86.3%;
   --clr-gray-light: 0 0% 93.3%;
   --clr-red: 356.7 90.1% 56.5%;
@@ -12,7 +12,7 @@
   --clr-blue: 214.5 100% 53.9%;
   --clr-white: 0 0% 100%;
 
-  /* font-size */
+  /* font-size - tamanho da fonte (abreviação do nome tamanho da fonte - valor em vw "viewport width" relativo à largura da tela - rem "root em" relativo à tamanho da fonte do elemento raiz */
   /* --fs-bf-194: 12.125rem; */
   --fs-bf-194: 12.3vw;
   --fs-bf-109: 6.8125rem;
@@ -25,20 +25,22 @@
   --fs-bf-16: 1rem;
   --fs-bf-15: 0.9375rem;
 
-  /* font family */
+  /* font family - familia de fontes("Montserrat e Poppins"-> fonte principais e "sans-serif" -> fontes de fallback) */
   --font-montserrat: "Montserrat", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 }
 
-/* // Default Reset ================================== */
+/* // Default Reset - Reset padrão====================== */
 
-*,
-*::after,
+*, /* asterisco é um seletor universal - eleciona todos os elementos do html*/
+*::after, /* after e before são pseudo-elemento (palavra-chave q permite q vc estilize uma parte específica do código) */
 *::before {
-  box-sizing: border-box;
+  box-sizing: border-box; /* fomatação do box model(modelo de caixa) -> box sizing (define cm a largura e a altura totais de um elemento são calculadas) - boder-box (usado p/ q as dimensões width e height já incluam o preenchimento e a borda) */
 }
 
-/* // Removing defaul margin ========================== */
+/*Obs. Box model - conceito q trata cada elemento HTML cm uma caixa retangular composta por 4 partes: conteúdo (texto, imagem, etc.), preenchimento (padding), borda (border) e margem (margin)*/
+
+/* // Removing defaul margin - Removendo margem padrão ==================== */
 
 body,
 h1,
@@ -53,11 +55,12 @@ dd {
   margin: 0;
 }
 
-/* // Removing list style =============================== */
+/* // Removing list style - Removendo estilo de lista ex menu=============== */
 
-ul[role="list"],
+ul[role="list"], /*seletor de atributo q seleciona todos os elementos <ul> (listas não ordenadas) q possuem o atributo role="list".*/
 ol[role="list"] {
-  list-style: none;
+  /*seletor de atributo q seleciona todos os elementos <ol> (listas ordenadas) que possuem o mesmo atributo role="list".->O atributo role="list"  é um atributo de ARIA (Accessible Rich Internet Applications) usado para dar um "papel" a um elemento, ajudando tecnologias assistivas (cm leitores de tela) a entenderem a função de um elemento. No caso de uma lista sem marcadores visuais, o role="list" avisa ao leitor de tela q o elemento ainda é uma lista, msm q ñ pareça visualmente.*/
+  list-style: none; /*list-style controla a aparência dos marcadores de itens de uma lista. Ao definir seu valor cm none, vc remove completamente os marcadores padrão, cm as • das listas <ul> ou os 1. 2. 3. das listas <ol>.*/
 }
 
 /* // set core root defaut ============================== */
