@@ -65,6 +65,12 @@ ol[role="list"] {
 
 /* // set core root defaut ============================== */
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* // set core body defaut ============================== */
+
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -127,3 +133,242 @@ body {
 }
 
 /* //////////////// Background-Color Utility Class */
+
+.bg-red {
+  background-color: hsl(var(--clr-red));
+}
+.bg-black {
+  background-color: hsl(var(--clr-black));
+}
+.bg-blue {
+  background-color: hsl(var(--clr-blue));
+}
+.bg-gray {
+  background-color: hsl(var(--clr-gray));
+}
+.bg-green {
+  background-color: hsl(var(--clr-green));
+}
+.bg-gray-light {
+  background-color: hsl(var(--clr-gray-light));
+}
+.bg-very-light-gray {
+  background-color: hsl(var(--clr-very-light-gray));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+.bg-yellow {
+  background-color: hsl(var(--clr-yellow));
+}
+
+/* //////////////// Text Utility Class============== */
+
+.text-red {
+  background-color: hsl(var(--clr-red));
+}
+.text-black {
+  background-color: hsl(var(--clr-black));
+}
+.text-blue {
+  background-color: hsl(var(--clr-blue));
+}
+.text-gray {
+  background-color: hsl(var(--clr-gray));
+}
+.text-green {
+  background-color: hsl(var(--clr-green));
+}
+.text-gray-light {
+  background-color: hsl(var(--clr-gray-light));
+}
+.text-very-light-gray {
+  background-color: hsl(var(--clr-very-light-gray));
+}
+.text-white {
+  background-color: hsl(var(--clr-white));
+}
+.text-yellow {
+  background-color: hsl(var(--clr-yellow));
+}
+
+/* //////////////// Font Size ============== */
+
+.fs-900 {
+  font-size: var(--fs-bf-194);
+}
+.fs-800 {
+  font-size: var(--fs-bf-109);
+}
+.fs-700 {
+  font-size: var(--fs-bf-80);
+}
+.fs-600 {
+  font-size: var(--fs-bf-65);
+}
+.fs-500 {
+  font-size: var(--fs-bf-50);
+}
+.fs-400 {
+  font-size: var(--fs-bf-45);
+}
+.fs-300 {
+  font-size: var(--fs-bf-30);
+}
+.fs-200 {
+  font-size: var(--fs-bf-20);
+}
+.fs-100 {
+  font-size: var(--fs-bf-16);
+}
+.fs-50 {
+  font-size: var(--fs-bf-15);
+}
+
+/* //////////////// Font Bold ============== */
+
+.bold-100 {
+  font-weight: 100;
+}
+.bold-200 {
+  font-weight: 200;
+}
+.bold-300 {
+  font-weight: 300;
+}
+.bold-400 {
+  font-weight: 400;
+}
+.bold-500 {
+  font-weight: 500;
+}
+.bold-600 {
+  font-weight: 600;
+}
+.bold-700 {
+  font-weight: 700;
+}
+.bold-800 {
+  font-weight: 800;
+}
+.bold-900 {
+  font-weight: 900;
+}
+.bold-bold {
+  font-weight: bold;
+}
+.bold-bolder {
+  font-weight: bolder;
+}
+
+/* ================== Font Family ======================= */
+
+.fs-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.fs-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ============= End of Utility Class =================== */
+
+/* ============ Component Utility Class ================= */
+
+.uil {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--flex-gap, 1rem);
+}
+
+.container {
+  width: 96vw;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ======== End of Component Utility Class ============== */
+
+/* ============== Start Header Section ================== */
+
+.primary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.header-inner-one {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 2rem;
+}
+
+.mobile-close-btn {
+  display: none;
+}
+
+.primary-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  --flex-gap: 3rem;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  color: hsl(var(--clr-black) / 0.6);
+  cursor: pointer;
+}
+
+.primary-navigation .active {
+  color: #000000;
+}
+
+.header-login {
+  justify-content: space-between;
+  align-items: center;
+  --flex-gap: 2rem;
+}
+
+.header-login .uil-shopping-bag {
+  font-size: 2rem;
+  margin-top: -0.5rem;
+  position: relative;
+}
+.header-login .uil-shopping-bag::after {
+  content: "0";
+  width: 1rem;
+  height: 1.2rem;
+  position: absolute;
+  background-color: hsl(var(--clr-red));
+  /*margin-top: -3rem;*/
+  margin-left: 1rem;
+  border-radius: 0.3rem;
+  display: grid;
+  place-items: center;
+  color: hsl(var(--clr-white));
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.mobile-open-btn {
+  display: none;
+}
+/* =============== Header Media Quaries ================= */
+
+/* //////////////// Mobile ============== */
+
+/* ============= End Header Media Quaries =============== */
+
+/* =============== End Header Section =================== */

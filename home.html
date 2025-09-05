@@ -24,7 +24,8 @@
     <!-- ===== Icon Cdn =================================================== -->
     <link rel="stylesheet" href="home.css" />
     <script src="home.js" defer></script>
-    <title>Loja</title>
+    <title>TechStore</title>
+    <link rel="shortcut icon" type="image/png" href="assets/Icon.png" />
   </head>
   <body class="home">
     <!-- ============== Header Section ==================================== -->
@@ -32,7 +33,7 @@
     <header class="primary-header container flex">
       <div class="header-inner-one flex">
         <div class="logo">
-          <img src="/image/logo" alt="logo imagem" />
+          <img src="assets/logobackground2.png" width="50%" alt="logo imagem" />
         </div>
         <button
           class="mobile-close-btn"
@@ -43,32 +44,33 @@
         </button>
         <nav>
           <ul
+            role="list"
             id="primary-navigation"
             data-visible="false"
-            class="primmary-navigation flex"
+            class="primary-navigation flex"
           >
             <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/home.html"
+              <a class="active fs-100 fs-montserrat bold-500" href="/home.html"
                 >Home</a
               >
             </li>
             <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/shop.html"
+              <a class="fs-100 fs-montserrat bold-500" href="/shop.html"
                 >Shop</a
               >
             </li>
             <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/about.html"
+              <a class="fs-100 fs-montserrat bold-500" href="/about.html"
                 >Sobre</a
               >
             </li>
             <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/blog.html"
+              <a class="fs-100 fs-montserrat bold-500" href="/blog.html"
                 >Blog</a
               >
             </li>
             <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/contact.html"
+              <a class="fs-100 fs-montserrat bold-500" href="/contact.html"
                 >Contato</a
               >
             </li>
@@ -79,11 +81,8 @@
       <div class="header-login flex">
         <p class="fs-100 fs-montserrat bold-500">login</p>
         <i class="uil uil-search"></i>
-        <i
-          id="cart-box"
-          aria-controls="cart-icon"
-          class="uil uil-shopping-bag"
-        ></i>
+        <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag">
+        </i>
 
         <!-- ============================================================== -->
 
@@ -92,23 +91,36 @@
         <div id="cart-icon" data-visible="false" class="cart-icon">
           <div class="shopping flex">
             <p>Carrinho de Compras</p>
-            <i class="uil uil-times"></i>
+            <i id="cross-btn" class="uil uil-times"></i>
           </div>
           <div class="cart bold-800 flex">
             <i class="uil uil-shopping-cart-alt"></i>
+            <p>Seu carrinho está vazio</p>
           </div>
         </div>
 
         <!-- ============================================================== -->
       </div>
-      <div class="mobile-open-bnt">
-        <i class="uil uil-alight-rigt"></i>
+      <div class="mobile-open-btn">
+        <i class="uil uil-alight-right"></i>
       </div>
     </header>
 
     <!-- ============== End Header Section ================================ -->
 
     <!-- ============== Hero Section ====================================== -->
+
+    <main class="hero-section">
+      <div>
+        <h1>Fone de Ouvido <span>Sem Fio</span> <span>HeadPhone</span></h1>
+        <img src=" " alt=" " />
+      </div>
+      <div class="hero-inner flex">
+        <div>
+          <button></button>
+        </div>
+      </div>
+    </main>
 
     <!-- ============== End of Hero Section =============================== -->
   </body>
