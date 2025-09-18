@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <script src="home.js" defer></script>
+    <title>Loja</title>
+  </head>
+  <body class="home">
+    <header class="primary-header container flex">
+      <div class="header-inner-one flex">
+        <div class="logo">
+          <img src="assets/logo.png" alt="logo imagem" />
+        </div>
+        <button
+          class="mobile-close-btn"
+          data-visible="false"
+          aria-controls="primary-navigation"
+        >
+          <i class="uil uil-times-circle"></i>
+        </button>
+        <nav>
+          <ul
+            role="list"
+            id="primary-navigation"
+            data-visible="false"
+            class="primmary-navigation flex"
+          >
+            <li>
+              <button class="homeHome-btn">
+                <a
+                  class="fs-100 fs-montserrat bold-500 text-white"
+                  type="submit"
+                  class="submit-btn text-white"
+                  rel="stylesheet"
+                  href="home.html"
+                  >Home</a
+                >
+                <!-- <a  href="/home.html"
+                >Home</a
+              >-->
+              </button>
+            </li>
+            <li>
+              <button class="homeAddProduto-btn">
+                <a
+                  class="fs-100 fs-montserrat bold-500 text-white"
+                  href="adicionar-produto.html"
+                  >Adicionar Produto</a
+                >
+              </button>
+            </li>
+            <li>
+              <button class="homeExcluirProduto-btn">
+                <a
+                  class="fs-100 fs-montserrat bold-500 text-white"
+                  href="excluir-produto.html"
+                  >Excluir Produto</a
+                >
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-login flex">
+        <p class="fs-100 fs-montserrat bold-500">login</p>
+        <i class="uil uil-search"></i>
+
+        <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag">
+          <span id="cart-counter">0</span>
+        </i>
+
+        <div id="cart-icon" data-visible="false" class="cart-icon">
+          <div class="shopping flex">
+            <p>Carrinho de Compras</p>
+            <i class="uil uil-times"></i>
+          </div>
+          <div class="cart bold-800 flex"></div>
+          <div
+            class="cart-total"
+            style="
+              padding: 1rem 2rem;
+              text-align: right;
+              border-top: 1px solid hsl(var(--clr-gray));
+            "
+          >
+            <p class="fs-100 fs-montserrat bold-700">
+              Total: <span id="cart-total-value">R$ 0.00</span>
+            </p>
+            <button
+              id="checkout-btn"
+              class="btn btn-success"
+              style="width: 100%; margin-top: 1rem"
+            >
+              Finalizar Compra
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-open-btn">
+        <i class="uil uil-alight-right"></i>
+      </div>
+    </header>
+
+    <main class="hero-section">
+      <div>
+        <h1 class="fs-200 fs-poppins">
+          Beats Solo
+          <spam
+            class="big-wireless block lineheight fs-300 blod-900 fs-poppins"
+          >
+            Wireless</spam
+          ><spam
+            class="text-white uppercase lineheight2 bold-bolder fs-poppins fs-900"
+            >HeadPhone</spam
+          >
+        </h1>
+        <img class="config-headset" src="/assets/image1.png" alt="" />
+      </div>
+
+      <div class="hero-inner flex">
+        <div>
+          <button class="large-btn bg-red text white fs-poppins fs-50">
+            Shop por Categorias
+          </button>
+        </div>
+        <div class="hero-info">
+          <h4 class="fs-montserrat">Description</h4>
+          <p class="fs-montserrat">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            sunt ab nulla accusamus explicabo consequatur eligendi possimus
+            porro ea vitae quasi veritatis praesentium
+          </p>
+        </div>
+      </div>
+    </main>
+    <section id="product-list-container" class="product-section grid"></section>
+  </body>
+</html>

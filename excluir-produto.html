@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerir Produtos</title>
+    <link rel="stylesheet" href="home.css" />
+    <style>
+      .product-list-container {
+        max-width: 800px;
+        margin: 2rem auto 4rem auto;
+        padding: 2rem;
+        background-color: hsl(var(--clr-gray-light));
+        border-radius: 1rem;
+      }
+      .product-list-container h1 {
+        font-family: var(--font-poppins);
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .product-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid hsl(var(--clr-gray));
+      }
+      .product-item:last-child {
+        border-bottom: none;
+      }
+      .product-item img {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
+      .product-item-details {
+        flex-grow: 1;
+        font-family: var(--font-montserrat);
+      }
+      .action-btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: 500;
+      }
+      .trash-container {
+        border-top: 3px solid hsl(var(--clr-black));
+      }
+    </style>
+  </head>
+  <body>
+    <header class="primary-header container flex">
+      <nav>
+        <ul role="list" class="primmary-navigation flex">
+          <li>
+            <button class="homeAddProduto-btn">
+              <a
+                class="fs-100 fs-montserrat bold-500 text-white"
+                href="home.html"
+                >Home</a
+              >
+            </button>
+          </li>
+          <li>
+            <button class="homeAddProduto-btn">
+              <a
+                class="fs-100 fs-montserrat bold-500 text-white"
+                href="adicionar-produto.html"
+                >Adicionar Produto</a
+              >
+            </button>
+          </li>
+          <li>
+            <button class="homeAddProduto-btn">
+              <a
+                class="fs-100 fs-montserrat bold-500 text-white"
+                href="excluir-produto.html"
+                >Excluir Produto</a
+              >
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="product-list-container">
+        <h1>Produtos Ativos na Loja</h1>
+        <div id="active-product-list"></div>
+      </div>
+
+      <div class="product-list-container trash-container">
+        <h1>Lixeira (Produtos Excluídos)</h1>
+        <div id="deleted-product-list"></div>
+      </div>
+    </main>
+
+    <script src="excluir-produto.js" defer></script>
+  </body>
+</html>
