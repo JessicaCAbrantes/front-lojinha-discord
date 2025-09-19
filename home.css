@@ -1189,3 +1189,25 @@ select:focus {
   box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
 }
 
+/* ================= BOTÕES DE AÇÃO (LISTA DE PRODUTOS) ================= */
+.action-btn {
+  font-family: var(--font-montserrat);
+  font-size: var(--fs-bf-16);
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
