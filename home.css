@@ -365,7 +365,7 @@ body {
 
 .logo {
   margin-right: 0.5rem;
-  width: 80px;
+  width: 250px;
   padding: 0;
   gap: 1px;
 }
@@ -405,7 +405,7 @@ body {
 
 .header-login .uil-shopping-bag {
   position: relative; /*quantidade no carrinho*/
-  font-size: 3.2rem;
+  font-size: 2rem;
   vertical-align: middle;
   margin-top: 0;
 }
@@ -436,6 +436,24 @@ body {
   align-items: center;
   justify-content: center;
   display: none;
+}
+/* ================= LINKS DO MENU ================= */
+.nav-link {
+  font-family: var(--font-montserrat) !important;
+  font-size: var(--fs-bf-16) !important;
+  font-weight: 600 !important;
+  color: white !important;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background-color: hsl(var(--clr-blue)); /* azul padrão */
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: hsl(var(--clr-black)); /* muda no hover */
+  opacity: 0.9;
 }
 
 /* =============== Cart Box ================= */
@@ -489,7 +507,7 @@ body {
   flex-direction: column;
   justify-content: flex-start; /* alinhado ao topo */
   width: 100%;
-  --flex-gap: 0.2rem;
+  --flex-gap: 3rem;
   align-items: center;
   font-family: var(--font-poppins);
   text-transform: uppercase;
@@ -1048,7 +1066,7 @@ body {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   border-radius: 6px;
-  font-family: var(--font-poppins);
+  font-family: var(--font-montserrat) !important;
   font-size: var(--fs-bf-16);
   font-weight: 600;
   text-align: center;

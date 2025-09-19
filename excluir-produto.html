@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gerir Produtos</title>
+    <title>Tech Store - Gerir Produtos</title>
+    <link rel="shortcut icon" type="image/png" href="assets/Icon.png" />
     <link rel="stylesheet" href="home.css" />
+
     <style>
       .product-list-container {
         max-width: 800px;
@@ -52,39 +54,15 @@
     </style>
   </head>
   <body>
-    <header class="primary-header container flex">
-      <nav>
-        <ul role="list" class="primmary-navigation flex">
-          <li>
-            <button class="homeAddProduto-btn">
-              <a
-                class="fs-100 fs-montserrat bold-500 text-white"
-                href="home.html"
-                >Home</a
-              >
-            </button>
-          </li>
-          <li>
-            <button class="homeAddProduto-btn">
-              <a
-                class="fs-100 fs-montserrat bold-500 text-white"
-                href="adicionar-produto.html"
-                >Adicionar Produto</a
-              >
-            </button>
-          </li>
-          <li>
-            <button class="homeAddProduto-btn">
-              <a
-                class="fs-100 fs-montserrat bold-500 text-white"
-                href="excluir-produto.html"
-                >Excluir Produto</a
-              >
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <!-- HEADER CENTRALIZADO -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
 
     <main>
       <div class="product-list-container">

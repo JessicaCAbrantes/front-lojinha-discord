@@ -3,122 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adicionar Novo Produto</title>
-    <link class="homeadd" rel="stylesheet" href="home.css" />
-    <button class="homeAddProduto-btn">
-      <a
-        type="submit"
-        class="fs-100 fs-montserrat bold-500 text-white"
-        rel="stylesheet"
-        href="home.html"
-        >Home</a
-      >
-    </button>
-    <button class="homeAddProduto-btn">
-      <a
-        type="submit"
-        class="fs-100 fs-montserrat bold-500 text-white"
-        rel="stylesheet"
-        href="excluir-produto.html"
-        >Excluir Produto</a
-      >
-    </button>
-
-    <button class="homeAddProduto-btn">
-      <a
-        class="fs-100 fs-montserrat bold-500 text-white"
-        href="adicionar-produto.html"
-        >Adicionar Produto</a
-      >
-    </button>
+    <title>Tech Store - Gerir Produtos</title>
+    <link rel="shortcut icon" type="image/png" href="assets/Icon.png" />
+    <link rel="stylesheet" href="home.css" />
 
     <style>
-      .form-container {
-        max-width: 600px;
-        margin: 4rem auto;
+      .product-list-container {
+        max-width: 800px;
+        margin: 2rem auto 4rem auto;
         padding: 2rem;
         background-color: hsl(var(--clr-gray-light));
         border-radius: 1rem;
       }
-      .form-container h1 {
+      .product-list-container h1 {
         font-family: var(--font-poppins);
         margin-bottom: 2rem;
         text-align: center;
       }
-      .form-group {
-        margin-bottom: 1.5rem;
-      }
-      .form-group label {
-        display: block;
-        font-family: var(--font-montserrat);
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-      }
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 0.8rem;
-        border: 1px solid hsl(var(--clr-gray));
-        border-radius: 0.5rem;
-        font-family: var(--font-montserrat);
-      }
-      .submit-btn {
-        width: 100%;
+      .product-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 1rem;
+        border-bottom: 1px solid hsl(var(--clr-gray));
+      }
+      .product-item:last-child {
+        border-bottom: none;
+      }
+      .product-item img {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
+      .product-item-details {
+        flex-grow: 1;
+        font-family: var(--font-montserrat);
+      }
+      .action-btn {
+        padding: 0.5rem 1rem;
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;
-        font-family: var(--font-poppins);
-        font-size: var(--fs-bf-16);
-        font-weight: 600;
+        font-weight: 500;
+      }
+      .trash-container {
+        border-top: 3px solid hsl(var(--clr-black));
       }
     </style>
   </head>
   <body>
-    <header class="primary-header container flex"></header>
+    <!-- HEADER CENTRALIZADO -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
 
     <main>
-      <div class="form-container">
-        <h1>Adicionar Novo Produto</h1>
-        <form id="add-product-form">
-          <div class="form-group">
-            <label for="product-name">Nome do Produto</label>
-            <input type="text" id="product-name" required />
-          </div>
-          <div class="form-group">
-            <label for="product-price">Preço (ex: 250.00)</label>
-            <input type="number" id="product-price" step="0.01" required />
-          </div>
-          <div class="form-group">
-            <label for="product-category">Categoria</label>
-            <select id="product-category" required>
-              <option value="">Selecione uma categoria</option>
-              <option value="Eletrônicos">Eletrônicos</option>
-              <option value="Acessórios">Acessórios</option>
-              <option value="Gadgets">Gadgets</option>
-              <option value="Smartwatches">Smartwatches</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="product-observation"
-              >Observações (descrição curta)</label
-            >
-            <textarea id="product-observation" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="product-image">URL da Imagem</label>
-            <input
-              type="url"
-              id="product-image"
-              placeholder="https://exemplo.com/imagem.png"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">Adicionar</button>
-        </form>
+      <div class="product-list-container">
+        <h1>Produtos Ativos na Loja</h1>
+        <div id="active-product-list"></div>
+      </div>
+
+      <div class="product-list-container trash-container">
+        <h1>Lixeira (Produtos Excluídos)</h1>
+        <div id="deleted-product-list"></div>
       </div>
     </main>
-    <script src="adicionar-produto.js" defer></script>
+
+    <script src="excluir-produto.js" defer></script>
   </body>
 </html>
