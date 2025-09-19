@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <!--Linguagem-->
   <head>
     <meta charset="UTF-8" />
-    <!--Caracteres especiais-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--Compatibilidade de versões anteriores-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Responsividade-->
-
-    <!--============= Google Fonts ======================================== -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!--============= Google Fonts ======================================== -->
-
-    <!-- ===== Icon Cdn =================================================== -->
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-    <!-- ===== Icon Cdn =================================================== -->
     <link rel="stylesheet" href="home.css" />
     <script src="home.js" defer></script>
-    <title>Loja</title>
+    <title>Tech Store</title>
+    <link rel="shortcut icon" type="image/png" href="assets/Icon.png" />
   </head>
   <body class="home">
-    <!-- ============== Header Section ==================================== -->
-
     <header class="primary-header container flex">
       <div class="header-inner-one flex">
         <div class="logo">
-          <img src="/image/logo" alt="logo imagem" />
+          <img src="assets/logo.png" alt="logo imagem" />
         </div>
         <button
           class="mobile-close-btn"
@@ -43,33 +32,20 @@
         </button>
         <nav>
           <ul
+            role="list"
             id="primary-navigation"
             data-visible="false"
             class="primmary-navigation flex"
           >
+            <li><a href="home.html" class="nav-link">Home</a></li>
             <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/home.html"
-                >Home</a
+              <a href="adicionar-produto.html" class="nav-link"
+                >Adicionar Produto</a
               >
             </li>
             <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/shop.html"
-                >Shop</a
-              >
-            </li>
-            <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/about.html"
-                >Sobre</a
-              >
-            </li>
-            <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/blog.html"
-                >Blog</a
-              >
-            </li>
-            <li>
-              <a class="fs-100 fs-montserrat bold 500" href="/contact.html"
-                >Contato</a
+              <a href="excluir-produto.html" class="nav-link"
+                >Excluir Produto</a
               >
             </li>
           </ul>
@@ -77,39 +53,78 @@
       </div>
 
       <div class="header-login flex">
-        <p class="fs-100 fs-montserrat bold-500">login</p>
+        <p class="fs-100 fs-montserrat bold-500">Login</p>
         <i class="uil uil-search"></i>
-        <i
-          id="cart-box"
-          aria-controls="cart-icon"
-          class="uil uil-shopping-bag"
-        ></i>
 
-        <!-- ============================================================== -->
-
-        <!-- Cart Box -->
+        <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag">
+          <span id="cart-counter">0</span>
+        </i>
 
         <div id="cart-icon" data-visible="false" class="cart-icon">
           <div class="shopping flex">
             <p>Carrinho de Compras</p>
             <i class="uil uil-times"></i>
           </div>
-          <div class="cart bold-800 flex">
-            <i class="uil uil-shopping-cart-alt"></i>
+          <div class="cart bold-800 flex"></div>
+          <div
+            class="cart-total"
+            style="
+              padding: 1rem 2rem;
+              text-align: right;
+              border-top: 1px solid hsl(var(--clr-gray));
+            "
+          >
+            <p class="fs-100 fs-montserrat bold-700">
+              Total: <span id="cart-total-value">R$ 0.00</span>
+            </p>
+            <button
+              id="checkout-btn"
+              class="btn btn-success"
+              style="width: 100%; margin-top: 1rem"
+            >
+              Finalizar Compra
+            </button>
           </div>
         </div>
-
-        <!-- ============================================================== -->
       </div>
-      <div class="mobile-open-bnt">
-        <i class="uil uil-alight-rigt"></i>
+
+      <div class="mobile-open-btn">
+        <i class="uil uil-alight-right"></i>
       </div>
     </header>
 
-    <!-- ============== End Header Section ================================ -->
+    <main class="hero-section">
+      <div>
+        <h1 class="fs-200 fs-poppins">
+          Beats Solo
+          <spam
+            class="big-wireless block lineheight fs-300 blod-900 fs-poppins"
+          >
+            Wireless</spam
+          ><spam
+            class="text-white uppercase lineheight2 bold-bolder fs-poppins fs-900"
+            >HeadPhone</spam
+          >
+        </h1>
+        <img class="config-headset" src="/assets/image1.png" alt="" />
+      </div>
 
-    <!-- ============== Hero Section ====================================== -->
-
-    <!-- ============== End of Hero Section =============================== -->
+      <div class="hero-inner flex">
+        <div>
+          <button class="large-btn bg-red text white fs-poppins fs-50">
+            Shop por Categorias
+          </button>
+        </div>
+        <div class="hero-info">
+          <h4 class="fs-montserrat">Description</h4>
+          <p class="fs-montserrat">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            sunt ab nulla accusamus explicabo consequatur eligendi possimus
+            porro ea vitae quasi veritatis praesentium
+          </p>
+        </div>
+      </div>
+    </main>
+    <section id="product-list-container" class="product-section grid"></section>
   </body>
 </html>
