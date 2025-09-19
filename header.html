@@ -1,0 +1,81 @@
+<header class="primary-header container flex">
+  <div class="header-inner-one flex">
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="assets/logo.png" alt="logo imagem" />
+    </div>
+
+    <!-- BOTÃO DE FECHAR MENU MOBILE -->
+    <button
+      class="mobile-close-btn"
+      data-visible="false"
+      aria-controls="primary-navigation"
+    >
+      <i class="uil uil-times-circle"></i>
+    </button>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav>
+      <ul
+        role="list"
+        id="primary-navigation"
+        data-visible="false"
+        class="primmary-navigation flex"
+      >
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li>
+          <a href="adicionar-produto.html" class="nav-link"
+            >Adicionar Produto</a
+          >
+        </li>
+        <li>
+          <a href="excluir-produto.html" class="nav-link">Excluir Produto</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- LOGIN + SEARCH + CARRINHO -->
+  <div class="header-login flex">
+    <p class="fs-100 fs-montserrat bold">Login</p>
+    <i class="uil uil-search"></i>
+
+    <!-- ÍCONE DO CARRINHO -->
+    <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag">
+      <span id="cart-counter">0</span>
+    </i>
+
+    <!-- CARRINHO -->
+    <div id="cart-icon" data-visible="false" class="cart-icon">
+      <div class="shopping flex">
+        <p>Carrinho de Compras</p>
+        <i class="uil uil-times"></i>
+      </div>
+      <div class="cart bold-800 flex"></div>
+      <div
+        class="cart-total"
+        style="
+          padding: 1rem 2rem;
+          text-align: right;
+          border-top: 1px solid hsl(var(--clr-gray));
+        "
+      >
+        <p class="fs-100 fs-montserrat bold-700">
+          Total: <span id="cart-total-value">R$ 0.00</span>
+        </p>
+        <button
+          id="checkout-btn"
+          class="btn btn-success"
+          style="width: 100%; margin-top: 1rem"
+        >
+          Finalizar Compra
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÃO MOBILE -->
+  <div class="mobile-open-btn">
+    <i class="uil uil-align-right"></i>
+  </div>
+</header>
