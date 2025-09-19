@@ -956,8 +956,9 @@ body {
 /* Título da Categoria */
 .category-title {
   font-family: var(--font-poppins);
-  font-size: var(--fs-bf-45);
-  margin-bottom: 2rem;
+  font-size: var(--fs-bf-30);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid hsl(var(--clr-gray));
 }
@@ -968,7 +969,7 @@ body {
   /* <<-- Altere '3' para '4' se quiser 4 colunas -->> */
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem; /* Espaçamento entre os produtos */
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 /* Cartão de cada Produto */
@@ -1209,5 +1210,25 @@ select:focus {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+/* ================= AJUSTE DE FONTES DOS CARDS DE PRODUTOS ================= */
+.product-name {
+  font-size: 0.9rem; /* menor que o padrão */
+  font-weight: 700;
+}
 
+.product-observation {
+  font-size: 0.8rem; /* descrição bem menor */
+  color: #555; /* cinza mais suave */
+}
 
+.product-price {
+  font-size: 1.1rem; /* menor que o atual */
+  font-weight: 700;
+}
+
+.product-card .product-btc {
+  font-size: 0.9rem; /* botão mais compacto */
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
