@@ -3,58 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Store - Gerir Produtos</title>
+    <title>Tech Store</title>
     <link rel="shortcut icon" type="image/png" href="assets/Icon.png" />
-    <link rel="stylesheet" href="home.css" />
-
+    <title>Adicionar Novo Produto</title>
+    <link class="homeadd" rel="stylesheet" href="home.css" />
     <style>
-      .product-list-container {
-        max-width: 800px;
-        margin: 2rem auto 4rem auto;
+      .form-container {
+        max-width: 600px;
+        margin: 4rem auto;
         padding: 2rem;
         background-color: hsl(var(--clr-gray-light));
         border-radius: 1rem;
       }
-      .product-list-container h1 {
+      .form-container h1 {
         font-family: var(--font-poppins);
         margin-bottom: 2rem;
         text-align: center;
       }
-      .product-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        border-bottom: 1px solid hsl(var(--clr-gray));
+      .form-group {
+        margin-bottom: 1.5rem;
       }
-      .product-item:last-child {
-        border-bottom: none;
+      .form-group label {
+        display: block;
+        font-family: var(--font-montserrat);
+        margin-bottom: 0.5rem;
+        font-weight: 500;
       }
-      .product-item img {
-        width: 60px;
-        height: 60px;
-        border-radius: 8px;
-        margin-right: 1rem;
-        object-fit: cover;
-      }
-      .product-item-details {
-        flex-grow: 1;
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid hsl(var(--clr-gray));
+        border-radius: 0.5rem;
         font-family: var(--font-montserrat);
       }
-      .action-btn {
-        padding: 0.5rem 1rem;
+      .submit-btn {
+        width: 100%;
+        padding: 1rem;
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;
-        font-weight: 500;
-      }
-      .trash-container {
-        border-top: 3px solid hsl(var(--clr-black));
+        font-family: var(--font-poppins);
+        font-size: var(--fs-bf-16);
+        font-weight: 600;
       }
     </style>
-  </head>
-  <body>
-    <!-- HEADER CENTRALIZADO -->
+
     <div id="header-placeholder"></div>
     <script>
       fetch("header.html")
@@ -63,19 +58,51 @@
           document.getElementById("header-placeholder").innerHTML = data;
         });
     </script>
+  </head>
+  <body>
+    <header class="primary-header container flex"></header>
 
     <main>
-      <div class="product-list-container">
-        <h1>Produtos Ativos na Loja</h1>
-        <div id="active-product-list"></div>
-      </div>
-
-      <div class="product-list-container trash-container">
-        <h1>Lixeira (Produtos Excluídos)</h1>
-        <div id="deleted-product-list"></div>
+      <div class="form-container">
+        <h1>Adicionar Novo Produto</h1>
+        <form id="add-product-form">
+          <div class="form-group">
+            <label for="product-name">Nome do Produto</label>
+            <input type="text" id="product-name" required />
+          </div>
+          <div class="form-group">
+            <label for="product-price">Preço (ex: 250.00)</label>
+            <input type="number" id="product-price" step="0.01" required />
+          </div>
+          <div class="form-group">
+            <label for="product-category">Categoria</label>
+            <select id="product-category" required>
+              <option value="">Selecione uma categoria</option>
+              <option value="Eletrônicos">Eletrônicos</option>
+              <option value="Acessórios">Acessórios</option>
+              <option value="Gadgets">Gadgets</option>
+              <option value="Smartwatches">Smartwatches</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="product-observation"
+              >Observações (descrição curta)</label
+            >
+            <textarea id="product-observation" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="product-image">URL da Imagem</label>
+            <input
+              type="url"
+              id="product-image"
+              placeholder="https://exemplo.com/imagem.png"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
       </div>
     </main>
-
-    <script src="excluir-produto.js" defer></script>
+    <script src="adicionar-produto.js" defer></script>
   </body>
 </html>
