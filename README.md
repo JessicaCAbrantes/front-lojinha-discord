@@ -63,6 +63,7 @@ O sistema também conta com um **carrinho de compras funcional**, exibição din
 
 ## 📂 Estrutura de Arquivos
 
+```
 📦 Tech Store
 ┣ 📜 home.html # Página inicial (listagem + carrinho)
 ┣ 📜 home.js # Lógica de exibição e carrinho
@@ -73,8 +74,7 @@ O sistema também conta com um **carrinho de compras funcional**, exibição din
 ┣ 📜 excluir-produto.js # Lógica de exclusão/restauração
 ┣ 📜 header.html # Cabeçalho comum a todas as páginas
 ┣ 📂 assets/ # Imagens e ícones
-
----
+```
 
 ## ▶️ Como Executar
 
